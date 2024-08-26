@@ -11,7 +11,8 @@ let database = {};
 // POST endpoint to add a new value
 app.post('/values', (req, res) => {
   const { value } = req.body;
-  const id = String(`${Object.keys(database).length + 1}`);
+  const { id } = req.body;
+  const id = String(id);
   database[id] = value;
   res.status(201).json({ id });
 });
