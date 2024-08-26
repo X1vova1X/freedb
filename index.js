@@ -12,7 +12,7 @@ let database = {};
 app.post('/values', (req, res) => {
   const { value } = req.body;
   const { id } = req.body;
-  const id = String(id);
+  const id = String({ id });
   database[id] = value;
   res.status(201).json({ id });
 });
