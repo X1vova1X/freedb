@@ -22,6 +22,11 @@ app.get('/values', (req, res) => {
   res.json(database);
 });
 
+app.get('/db/clear', (req, res) => {
+  database = {};
+  res.send("DB cleared.")
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
