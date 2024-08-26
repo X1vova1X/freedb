@@ -12,9 +12,9 @@ let database = {};
 app.post('/values', (req, res) => {
   const { value } = req.body;
   const { id } = req.body;
-  const id = String({ id });
+  const id2 = String({ id });
   database[id] = value;
-  res.status(201).json({ id });
+  res.status(201).json({ id2 });
 });
 
 // GET endpoint to retrieve all values
